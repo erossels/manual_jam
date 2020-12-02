@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  root 'home#index'
+
   resources :stories
-  root 'stories#index'
+  # root 'stories#index'
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create, :show]
